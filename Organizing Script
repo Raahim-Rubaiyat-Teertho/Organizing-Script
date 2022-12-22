@@ -1,0 +1,25 @@
+import os
+import shutil
+
+os.chdir('C:\\Users\\DELL\\Desktop')
+work = 'C:\\Users\\DELL\\Desktop'
+#print(os.listdir())
+
+os.mkdir("PNGs")
+os.mkdir("PDFs")
+os.mkdir("Text Files")
+os.mkdir("Media Files")
+
+for i in os.listdir():
+    source = i
+    new_ls = i.split('.')
+
+    if(new_ls[-1] == 'png'):
+        shutil.move('C:\\Users\\DELL\\Desktop\\' + i, 'C:\\Users\\DELL\\Desktop\\PNGs')
+
+    if(new_ls[-1] == 'pdf'):
+        shutil.move('C:\\Users\\DELL\\Desktop\\' + i, 'C:\\Users\\DELL\\Desktop\\PDFs')
+
+    if(new_ls[-1] == 'txt'):
+        shutil.move('C:\\Users\\DELL\\Desktop\\' + i, 'C:\\Users\\DELL\\Desktop\\Text Files')
+    
